@@ -47,7 +47,7 @@ Name-value pairs may share names in the same recur expression, in which case the
 ;; => [0 10]
 ```
 
-Works nicely with clojure.tools.macro/macrolet:
+Works nicely with clojure.tools.macro/macrolet, handy for separating the branching logic from the state transition implementations:
 
 ```clojure
 ;; using neat external library: https://github.com/clojure/tools.macro
