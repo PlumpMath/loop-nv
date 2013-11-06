@@ -38,7 +38,6 @@ Works nicely with clojure.tools.macro/macrolet:
 
 ```clojure
 ;; using neat external library: https://github.com/clojure/tools.macro
-(in-ns 'loop-nv.loop-nv)
 (ns macrolet-demo
   (:use [loop-nv.loop-nv :only [loop-nv recur-nv]]
         [clojure.tools.macro :only [macrolet]]
@@ -83,9 +82,6 @@ This prints:
 ```
 
 Name-value pairs may share names in the same recur expression, in which case the rightmost pair takes priority:
-
-
-
 
 
 
