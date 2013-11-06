@@ -43,6 +43,8 @@ Name-value pairs may share names in the same recur expression, in which case the
     (recur-nv loop-count (inc loop-count)
               x 1e3
               x (dec x))))
+
+;; => [0 10]
 ```
 
 Works nicely with clojure.tools.macro/macrolet:
