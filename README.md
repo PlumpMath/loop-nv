@@ -9,6 +9,10 @@ Named arguments seem to help in many cases.
 
 ## Usage
 
+```clojure
+(use '[loop-nv.loop-nv :only [loop-nv recur-nv]])
+```
+
 <code>loop-nv</code> is identical to <code>loop</code>, except it admits <code>recur-nv</code> expressions in addition to normal <code>recur</code> expressions. 
  
 <code>recur-nv</code> takes a series of name-value pairs, like bindings in a <code>let</code>
