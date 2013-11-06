@@ -28,7 +28,7 @@
  expression. The names must be of local bindings defined in the loop-nv
  expression. The values associated with those names in the recur-nv 
  expression will be bound to those names in the next loop. Names that 
- do not occur in the recur-nv expression will remain the same in the 
+ do not occur in the recur-nv expression will have the same values
  next loop. The same name may appear in a name-value pair more than
  once, in which case the rightmost pair takes priority.
 
