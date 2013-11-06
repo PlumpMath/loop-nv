@@ -14,7 +14,7 @@
     (let [us (set (keys updates))
           ls (set loop-args)]
       (assert (clojure.set/subset? us ls)
-              (apply str "recur-nv form references parameters not in loop: "
+              (apply str "recur-nv form references parameters not defined in loop-nv: "
                      (interpose ", " (remove ls (take-nth 2 params))))))
     (->> loop-args
          (map (merge (zipmap loop-args loop-args) updates))
