@@ -34,6 +34,17 @@ expression. The names must be of local bindings defined in the <code>loop-nv</co
  ;; => [5 5 10]
 ```
 
+Name-value pairs may share names in the same recur expression, in which case the rightmost pair takes priority:
+
+```clojure
+(loop-nv [x 10, loop-count 0]
+  (if (zero? x)
+    [x loop-count]
+    (recur-nv loop-count (inc loop-count)
+              x 1e3
+              x (dec x))))
+```
+
 Works nicely with clojure.tools.macro/macrolet:
 
 ```clojure
@@ -80,10 +91,6 @@ This prints:
  [:b 9]
  [:a 10]]
 ```
-
-Name-value pairs may share names in the same recur expression, in which case the rightmost pair takes priority:
-
-
 
 ## License
 
