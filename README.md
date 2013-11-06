@@ -20,7 +20,7 @@ expression. The names must be of local bindings defined in the <code>loop-nv</co
 
 ```clojure
  (loop-nv [x 0, y 10, loop-count 0]
-   (let [diff (Math/abs (- x y))]
+   (let [diff (- x y)]
      (cond (zero? diff)
            [x y loop-count]
 		       
@@ -31,7 +31,6 @@ expression. The names must be of local bindings defined in the <code>loop-nv</co
            :else
            (recur-nv loop-count (inc loop-count) 
                      y (dec y)))))
-
  ;; => [5 5 10]
 ```
 
