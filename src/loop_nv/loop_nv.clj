@@ -9,7 +9,7 @@
 
 (defn expand-recur-nv [form loop-args]
   {:pre (recur-nv-sym? (first form))}
-  (let [[bplt & params] form
+  (let [[_ & params] form
         updates (apply hash-map params)]
     (let [us (set (keys updates))
           ls (set loop-args)]
