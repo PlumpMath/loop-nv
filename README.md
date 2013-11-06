@@ -41,4 +41,4 @@ once, in which case the rightmost pair takes priority.
 
 Copyright © 2013 Timothy Gardner
 
-Distributed under the Eclipse Public License, the same as Clojure.
+Distributed under the Eclipse Public License.
